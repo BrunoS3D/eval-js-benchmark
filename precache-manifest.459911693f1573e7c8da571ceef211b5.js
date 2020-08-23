@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "68815dd66b5c215df68ea19e64b54f8e",
+    "revision": "0feae88e4bc20fdbacd95a8a50d4c4a3",
     "url": "/eval-js-benchmark/index.html"
   },
   {
-    "revision": "352837532d5b3dc8e154",
+    "revision": "bae0eae39af56d052e35",
     "url": "/eval-js-benchmark/static/css/main.bd279d76.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eval-js-benchmark/static/js/2.b0eed615.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "352837532d5b3dc8e154",
-    "url": "/eval-js-benchmark/static/js/main.ac37786b.chunk.js"
+    "revision": "bae0eae39af56d052e35",
+    "url": "/eval-js-benchmark/static/js/main.24b5ec14.chunk.js"
   },
   {
     "revision": "eb996b56ba7f15e0eb7c",
