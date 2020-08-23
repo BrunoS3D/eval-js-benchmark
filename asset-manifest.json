@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/eval-js-benchmark/static/css/main.bd279d76.chunk.css",
-    "main.js": "/eval-js-benchmark/static/js/main.bf2ce39b.chunk.js",
-    "main.js.map": "/eval-js-benchmark/static/js/main.bf2ce39b.chunk.js.map",
+    "main.js": "/eval-js-benchmark/static/js/main.d1ccce9f.chunk.js",
+    "main.js.map": "/eval-js-benchmark/static/js/main.d1ccce9f.chunk.js.map",
     "runtime-main.js": "/eval-js-benchmark/static/js/runtime-main.602a697c.js",
     "runtime-main.js.map": "/eval-js-benchmark/static/js/runtime-main.602a697c.js.map",
-    "static/js/2.8a88a306.chunk.js": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js",
-    "static/js/2.8a88a306.chunk.js.map": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js.map",
+    "static/js/2.b0eed615.chunk.js": "/eval-js-benchmark/static/js/2.b0eed615.chunk.js",
+    "static/js/2.b0eed615.chunk.js.map": "/eval-js-benchmark/static/js/2.b0eed615.chunk.js.map",
     "index.html": "/eval-js-benchmark/index.html",
-    "precache-manifest.a8bce55aad8348ca4b7252770bf5c697.js": "/eval-js-benchmark/precache-manifest.a8bce55aad8348ca4b7252770bf5c697.js",
+    "precache-manifest.d36b3c701ed160068efbd98930e7c642.js": "/eval-js-benchmark/precache-manifest.d36b3c701ed160068efbd98930e7c642.js",
     "service-worker.js": "/eval-js-benchmark/service-worker.js",
     "static/css/main.bd279d76.chunk.css.map": "/eval-js-benchmark/static/css/main.bd279d76.chunk.css.map",
-    "static/js/2.8a88a306.chunk.js.LICENSE.txt": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js.LICENSE.txt"
+    "static/js/2.b0eed615.chunk.js.LICENSE.txt": "/eval-js-benchmark/static/js/2.b0eed615.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.602a697c.js",
-    "static/js/2.8a88a306.chunk.js",
+    "static/js/2.b0eed615.chunk.js",
     "static/css/main.bd279d76.chunk.css",
-    "static/js/main.bf2ce39b.chunk.js"
+    "static/js/main.d1ccce9f.chunk.js"
   ]
 }
