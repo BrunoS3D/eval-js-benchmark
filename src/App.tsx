@@ -3,29 +3,35 @@ import util from "util";
 import { ControlledEditor } from "@monaco-editor/react";
 
 function App() {
-    const [code, setCode] = useState("var a = 5, b = 10;\n\na + b;");
-    const [executionStatus, setExecutionStatus] = useState({ error: null, evalResult: undefined, timeInSeconds: 0, timeInMilliseconds: 0 });
+    const [code, setCode] = useState(
+        'const b = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\tb.push("BBBBBBBBBB".toLowerCase() === "bbbbbbbbbb")\n}\n\n/*===*/\n\nconst a = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\ta.push("aaaaaaaaaa".toUpperCase() === "AAAAAAAAAA")\n}'
+    );
+    const [executionStatus, setExecutionStatus] = useState([{ error: null, evalResult: undefined, timeInSeconds: 0, timeInMilliseconds: 0 }]);
 
     function runTest() {
         if (!code || code.length === 0) return;
 
-        let error = null;
-        let result = null;
-        const t0 = performance.now();
+        const snippets = code.split("/*===*/");
 
-        try {
-            result = eval(code);
-        } catch (err) {
-            error = err;
-        }
+        const execStatus = snippets.map((snippet) => {
+            let error = null;
+            let result = null;
+            const t0 = performance.now();
 
-        const t1 = performance.now();
+            try {
+                result = eval(code);
+            } catch (err) {
+                error = err;
+            }
 
-        const durationMs = t1 - t0;
+            const t1 = performance.now();
 
-        const status = { error, evalResult: result, timeInSeconds: durationMs / 1000, timeInMilliseconds: durationMs };
+            const durationMs = t1 - t0;
 
-        setExecutionStatus(status);
+            return { error, evalResult: result, timeInSeconds: durationMs / 1000, timeInMilliseconds: durationMs };
+        });
+
+        setExecutionStatus(execStatus);
     }
 
     function consolify(value: any) {
@@ -47,12 +53,20 @@ function App() {
                 </div>
                 <div className="right-container" style={{ padding: "30px", color: "#fff", fontFamily: 'Consolas, "Courier New", monospace' }}>
                     <h1>Execution Status</h1>
+                    <p>
+                        Use <code style={{ padding: "2px", borderRadius: "3px", backgroundColor: "#555" }}>/*===*/</code> to separate snippets
+                    </p>
                     <button onClick={() => runTest()}>Execute</button>
-
-                    <p>Execution time (seconds): {executionStatus.timeInSeconds}</p>
-                    <p>Execution time (milliseconds): {executionStatus.timeInMilliseconds}</p>
-                    <p>Eval result: {consolify(executionStatus.evalResult)}</p>
-                    <p>Error: {consolify(executionStatus.error)}</p>
+                    {executionStatus &&
+                        executionStatus.map((snippet, index) => (
+                            <div className="snippet-status" key={index}>
+                                <h3>Snippet: {index + 1}</h3>
+                                <p>Execution time (seconds): {snippet.timeInSeconds}</p>
+                                <p>Execution time (milliseconds): {snippet.timeInMilliseconds}</p>
+                                <p>Eval result: {consolify(snippet.evalResult)}</p>
+                                <p>Error: {consolify(snippet.error)}</p>
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>
