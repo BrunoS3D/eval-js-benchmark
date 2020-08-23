@@ -4,7 +4,7 @@ import { ControlledEditor } from "@monaco-editor/react";
 
 function App() {
     const [code, setCode] = useState(
-        'const b = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\tb.push("BBBBBBBBBB".toLowerCase() === "bbbbbbbbbb")\n}\n\n/*===*/\n\nconst a = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\ta.push("aaaaaaaaaa".toUpperCase() === "AAAAAAAAAA")\n}\n\n/*===*/\n\n1 + 2'
+        'const b = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\tb.push("BBBBBBBBBB".toLowerCase() === "bbbbbbbbbb")\n}\n\n/*===*/\n\nconst a = []\n\nfor (let idx = 0; idx < 1000000; idx++) {\n\ta.push("aaaaaaaaaa".toUpperCase() === "AAAAAAAAAA")\n}\n\n/*===*/\n\n1 + 2\n\n/*===*/\n\n// error\na + b'
     );
     const [executionStatus, setExecutionStatus] = useState([{ error: null, evalResult: undefined, timeInSeconds: 0, timeInMilliseconds: 0 }]);
 
