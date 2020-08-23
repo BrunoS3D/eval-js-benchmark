@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/eval-js-benchmark/static/css/main.bd279d76.chunk.css",
+    "main.js": "/eval-js-benchmark/static/js/main.0028bbd8.chunk.js",
+    "main.js.map": "/eval-js-benchmark/static/js/main.0028bbd8.chunk.js.map",
+    "runtime-main.js": "/eval-js-benchmark/static/js/runtime-main.602a697c.js",
+    "runtime-main.js.map": "/eval-js-benchmark/static/js/runtime-main.602a697c.js.map",
+    "static/js/2.8a88a306.chunk.js": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js",
+    "static/js/2.8a88a306.chunk.js.map": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js.map",
+    "index.html": "/eval-js-benchmark/index.html",
+    "precache-manifest.cd76b020d81e0bdcd8c23e6df7c53483.js": "/eval-js-benchmark/precache-manifest.cd76b020d81e0bdcd8c23e6df7c53483.js",
+    "service-worker.js": "/eval-js-benchmark/service-worker.js",
+    "static/css/main.bd279d76.chunk.css.map": "/eval-js-benchmark/static/css/main.bd279d76.chunk.css.map",
+    "static/js/2.8a88a306.chunk.js.LICENSE.txt": "/eval-js-benchmark/static/js/2.8a88a306.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.602a697c.js",
+    "static/js/2.8a88a306.chunk.js",
+    "static/css/main.bd279d76.chunk.css",
+    "static/js/main.0028bbd8.chunk.js"
+  ]
+}
