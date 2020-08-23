@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import util from "util";
 import { ControlledEditor } from "@monaco-editor/react";
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
         setExecutionStatus(status);
     }
 
+    function consolify(value: any) {
+        return util.inspect(value, { showHidden: false });
+    }
+
     return (
         <div className="App">
             <div className="main-container" style={{ display: "flex", flexDirection: "row" }}>
@@ -46,8 +51,8 @@ function App() {
 
                     <p>Execution time (seconds): {executionStatus.timeInSeconds}</p>
                     <p>Execution time (milliseconds): {executionStatus.timeInMilliseconds}</p>
-                    <p>Eval result: {executionStatus.evalResult + ""}</p>
-                    <p>Error: {executionStatus.error ? executionStatus.error! + "" : "null"}</p>
+                    <p>Eval result: {consolify(executionStatus.evalResult)}</p>
+                    <p>Error: {consolify(executionStatus.error)}</p>
                 </div>
             </div>
         </div>
