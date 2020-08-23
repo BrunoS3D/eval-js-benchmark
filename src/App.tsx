@@ -19,7 +19,7 @@ function App() {
             const t0 = performance.now();
 
             try {
-                result = eval(code);
+                result = eval(snippet);
             } catch (err) {
                 error = err;
             }
