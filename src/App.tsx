@@ -46,7 +46,7 @@ function App() {
 
                     <p>Execution time (seconds): {executionStatus.timeInSeconds}</p>
                     <p>Execution time (milliseconds): {executionStatus.timeInMilliseconds}</p>
-                    <p>Eval result: {JSON.stringify(executionStatus.evalResult)}</p>
+                    <p>Eval result: {executionStatus.evalResult + ""}</p>
                     <p>Error: {executionStatus.error ? executionStatus.error! + "" : "null"}</p>
                 </div>
             </div>
